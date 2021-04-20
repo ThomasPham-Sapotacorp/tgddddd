@@ -1,0 +1,304 @@
+/* header */
+.header_top{
+    height: 40px;
+    background-color: #000;
+    position: relative;
+    display: flex;
+    color:white;
+    justify-content: center;
+}
+
+.logo{
+    height: 40px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+
+.h-province.dt{
+    margin-right: 10px;
+}
+
+.h-province > div > b {
+    color: #FFE500;
+    font-size: 11px;
+}
+
+.h-province.dt > span {
+    color: #fff;
+    font-size: 11px;
+    display: block;
+    margin-bottom: -3px;
+    padding-top: 3px;
+}
+
+header #search-site {
+    float: left;
+    position: relative;
+    top: -6px;
+    height: 30px;
+    margin-top: 10px;
+    margin-right: 15px;
+    background: #fff;
+    border-radius: 4px;
+    bottom: -5px; 
+    padding-left: 8px;
+}
+
+header #search-site .topinput {
+    float: left;
+    width: 162px;
+    padding-top: 2px;
+    border: 0;
+    position: relative;
+    background: #fff;
+    height: 27px;
+    text-indent: 10px;
+    font-size: 13px;
+}
+
+header #search-site .btntop {
+    height: 30px;
+    width: 30px;
+    
+}
+
+
+
+header .menu-info > * {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 12px;
+}
+
+header .menu-info {
+    width: 673px  ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header .menu-info > div > a {
+    padding: 0 10px;
+    border-left: 1px solid #232323;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+}
+
+
+header .menu-info > a.a1 {
+    width: 97px;
+    border: 1px solid #8F8F8F;
+    border-radius: 4px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+header .menu-info > a.a2 {
+    padding: 2px 10px 0 10px;
+    line-height: 1.3;
+    width: 75px;
+    text-align: center;
+}
+
+header .menu-info > a.a1:hover {
+    background: rgba(255, 255, 255, .4);
+}
+
+header .menu-info > a.a1 > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header .menu-info > a.a1 > i {
+    line-height: 18px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+
+
+
+header .menu-info > div {
+    margin-left: auto;
+    order: 2;
+}
+
+header .menu-info > div > a:hover {
+    background-color: #fff;
+    color: black;
+}
+
+
+header .menu-info > div > a.mn-new {
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 6px;
+    height: 34px;
+}
+
+
+/* header - bottom */
+
+.header_bottom{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+    background-color: #FED101;
+    height: 40px;             
+}
+
+
+
+
+header .header_bottom > nav {
+    max-width: 1200px;
+    margin: auto;
+    min-width: 1024px;
+    width: 100%;
+}
+
+header .header_bottom > nav > a {
+    padding: 0 12px;
+    display: table-cell !important;
+    vertical-align: middle;
+    height: 40px;
+    white-space: nowrap;
+    color: #000;
+    text-transform: none;
+    font-size: 14px;
+}
+
+
+
+header .header_bottom > nav > a > *{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header .header_bottom > nav > a:hover {
+    background-color: #fff;
+}
+
+header .header_bottom > nav > a > i {
+    margin: 0 5px 0 0;
+}
+
+
+
+header .header_bottom > nav > a > b {
+    font-weight: normal;
+}
+
+
+
+#phukien::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 6px solid #333;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.phukien {
+    cursor: pointer;
+}
+
+.phukien:hover .navaccessories2020 {
+    display: block;
+}
+
+
+
+
+/* footer */
+.rowfoot1 {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    min-width: 1024px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+.rowfoot2 {
+    width: 100%;
+    min-width: 980px;
+    overflow: hidden;
+    background: #f8f8f8;
+    padding: 10px 0;
+}
+
+.colfoot {
+    float: left;
+    width: 28%;
+    margin: 0;
+    position: relative;
+}
+
+.colfoot li {
+    float: none;
+    position: relative;
+    font-size: 13px;
+    color: #444;
+}
+
+.colfoot li a {
+    display: block;
+    color: #288ad6;
+    font-size: 14px;
+    line-height: 25px;
+    padding-top: 5px;
+}
+
+.colfoot li p {
+    display: block;
+    padding-top: 5px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #666;
+}
+
+.colfoot li p a {
+    display: inline;
+    font-weight: 600;
+    color: #333;
+    padding: 0 5px;
+}
+
+.colfoot li.showmore {
+    font-weight: bold;
+}
+
+.colfoot li.hidden {
+    display: none;
+}
+
+.collast {
+    width: 11%;
+    float: right;
+}
+
+.rowfoot2 p {
+    display: block;
+    width: 100%;
+    margin: auto;
+    font-size: 10px;
+    color: #999;
+    text-align: center;
+}
+
+.rowfoot2 a {
+    color: #999;
+}
+

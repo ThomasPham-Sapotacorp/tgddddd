@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/base.css">
+    <link rel="stylesheet" href="public/css/home.css">
+    <link rel="stylesheet" href="public/css/fontawesome/css/all.css">
+    <script src="public/scripts/hihi.js"></script>
+    <title>TGDD</title>
+</head>
+
+<body style="background-color:#f0f0f0">
+
+    <header>
+        <div class="header_top">
+
+            <img src="public/image/logo.png" class="logo" alt="Thế giới di động" class="">
+            <div class="h-province dt" data-scenario="1" data-sv="TGDD114">
+                <span>Xem giá, khuyến mãi tại</span>
+                <div>
+                    <b id="h-provincename" class="">Hà Nội</b>
+                </div>
+            </div>
+
+            <form id="search-site" action="/tim-kiem" method="get" autocomplete="off">
+                <input class="topinput" id="search-keyword" name="key" type="text" aria-label="Bạn tìm gì..."
+                    placeholder="Bạn tìm gì..." autocomplete="off" onkeyup="SuggestSearch(event,this, 0);"
+                    maxlength="50">
+                <button class="btntop" type="submit" aria-label="tìm kiếm"><i
+                        class="fas fa-search btn-search"></i></button>
+            </form>
+            <div class="menu-info">
+                <a href="/gio-hang" class="a1 menu-info-item"><i class="fas fa-cart-plus"></i><span>Giỏ hàng</span></a>
+                <a href="/lich-su-mua-hang" class="a2  menu-info-item">LỊCH SỬ <br> MUA HÀNG</a>
+                <div>
+                    <a href="/tin-tuc" class="mn-new">24h<br>Công nghệ</a>
+                    <a href="/hoi-dap" class="mn-faq">Hỏi đáp</a>
+                    <a href="/game-app" class="mn-gameapp">Game App</a>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="header_bottom">
+            <nav>
+                <a href="/dtdd" class="mobile" title="Điện thoại di động, smartphone">
+                    <i class="fas fa-mobile-alt fa-lg "></i><b>Điện thoại</b>
+                </a>
+                <a href="/laptop" class="laptop" title="Máy tính xách tay, Laptop">
+                    <i class="fas fa-laptop fa-lg "></i><b>Laptop</b>
+                </a>
+                <a href="/may-tinh-bang" class="tablet" title="Máy tính bảng, tablet">
+                    <i class="fas fa-tablet-alt fa-lg"></i><b>Tablet</b>
+                </a>
+                <a href="/phu-kien" class="phukien"
+                    title="Phụ kiện điện thoại di động, phụ kiện tablet, phụ kiện laptop">
+                    <i class="fas fa-headphones-alt fa-lg"></i><b id="phukien">Phụ kiện</b>
+                </a>
+                <a href="/dong-ho" class="fashionwatch" title="Đồng hồ thời trang" style="display: none;">
+                    <i class="far fa-clock fa-lg"></i><b>Đồng hồ thời trang</b>
+                </a>
+                <a href="/dong-ho-thong-minh" class="smartwatch" title="Đồng hồ thông minh">
+                    <i class="far fa-clock fa-lg"></i><b>Đồng hồ thông minh</b>
+                </a>
+                <a href="/may-tinh-de-ban" class="pc" title="PC, Máy in">
+                    <i class="fas fa-desktop fa-lg"></i><b>PC, Máy in</b>
+                </a>
+                <a href="/may-doi-tra" class="mn-maydoitra" title="Máy cũ giá rẻ">
+                    Máy cũ giá rẻ
+                </a>
+                <a href="/sim-so-dep" class="mn-sim" title="Sim, Thẻ cào">
+                    Sim, Thẻ cào
+                </a>
+                <a href="/tien-ich/thanh-toan-tra-gop" class="mn-utility" title="Trả góp, điện nước">
+                    Trả góp, điện nước
+                </a>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="homebanner">
+            <div class="top_post_left">
+                <div>
+                    <div class="owl-item">
+                        <img style="cursor:pointer" src="https://cdn.tgdd.vn/2021/04/banner/S21-800-300-800x300.png"
+                            alt="A52" width="790" height="300">
+                    </div>
+                </div>
+
+                <div class="sale_off">
+                    <div class="owl-item" style="width: 158px;">
+                        <div class="item">
+                            <h3>Galaxy S21 Series 5G<br>Trả Góp 0%</h3>
+                            <i class="arrowbar"></i>
+                        </div>
+                    </div>
+                    <div class="owl-item synced" style="width: 158px;">
+                        <div class="item">
+                            <i class="arrowbarleft"></i>
+                            <h3>OPPO Reno5<br>Giảm Ngay 300.000đ</h3>
+                            <i class="arrowbar"></i>
+                        </div>
+                    </div>
+                    <div class="owl-item" style="width: 158px;">
+                        <div class="item">
+                            <i class="arrowbarleft"></i>
+                            <h3>Sắm iPhone<br>Giảm Đến 2,3 Triệu</h3>
+                            <i class="arrowbar"></i>
+                        </div>
+                    </div>
+                    <div class="owl-item" style="width: 158px;">
+                        <div class="item">
+                            <i class="arrowbarleft"></i>
+                            <h3>Sắm Realme<br>Giảm Đến 500.000đ</h3>
+                            <i class="arrowbar"></i>
+                        </div>
+                    </div>
+                    <div class="owl-item" style="width: 158px;">
+                        <div class="item">
+                            <i class="arrowbarleft"></i>
+                            <h3>Galaxy Watch3<br>Giảm Sốc 4 Triệu</h3>
+                            <i class="arrowbar"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="top_post_right">
+                <div class="congnghe">
+                    <figure>
+                        <h2><a href="/tin-tuc">24h công nghệ</a></h2>
+                        <b></b>
+                    </figure>
+                    <ul>
+                        <li>
+                            <a href="/tin-tuc/iphone-se-2020-cuc-dang-mua--1343151">
+                                <img width="100" height="70" style="object-fit: contain;"
+                                    src="https://cdn.tgdd.vn/Files/2021/04/13/1343151/iphonese202010_800x450-100x100.jpg"
+                                    alt="iPhone SE 2020: cấu hình mạnh mẽ với chip A13, thiết kế mỏng nhẹ, tiện dụng, cực đáng mua khi giá đã giảm về phân khúc 10 triệu">
+                                <div>
+                                    <h3>iPhone SE 2020: cấu hình mạnh mẽ với chip A13, thiết kế mỏng nhẹ, tiện dụng</h3>
+                                    <span>1 giờ trước</span>
+                                </div>
+
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="twobanner ">
+                    <a aria-label="slide" data-cate="0" data-place="1158"
+                        href="https://www.thegioididong.com/dtdd/samsung-galaxy-a52-5g"
+                        onclick="jQuery.ajax({ url: 'https://www.thegioididong.com/bannertracking?bid=42256&amp;r='+ (new Date).getTime(), async: true, cache: false });"><img
+                            style="cursor:pointer" src="https://cdn.tgdd.vn/2021/04/banner/398-110-398x110-2.png"
+                            alt="A02" width="398" height="110"></a>
+                    <a aria-label="slide" data-cate="0" data-place="1158"
+                        href="https://www.thegioididong.com/apple#iphone"
+                        onclick="jQuery.ajax({ url: 'https://www.thegioididong.com/bannertracking?bid=41872&amp;r='+ (new Date).getTime(), async: true, cache: false });"><img
+                            style="cursor:pointer" src="https://cdn.tgdd.vn/2021/04/banner/398-110-398x110.png"
+                            alt="iphone" width="398" height="110"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="clr"></div>
+
+        <div class="promotebanner b1">
+            <img href="#" style="cursor:pointer" src="https://cdn.tgdd.vn/2021/04/banner/1200-75-1200x75-3.png"
+                alt="Online" width="1200" height="75">
+        </div>
+
+        <div style="display: block; overflow: hidden; background: #fff; margin: 10px 0px;">
+            <div class="navigat first ">
+                <h2>23 KHUYẾN MÃI HOT NHẤT</h2>
+            </div>
+
+            <div class="homepromo">
+                <div class="owl-wrapper">
+                    <div class="owl-item" style="width: 240px;">
+                        <div class="item" data-index="1">
+                            <a href="/" class="a-installment">
+                                <div class="heightlabel">
+                                    <label class="installment">Trả góp <b>0%</b></label>
+                                </div>
+                                <img width="180" height="180"
+                                    src="https://cdn.tgdd.vn/Products/Images/42/235440/samsung-galaxy-a52-5g-thumb-black-600x600-600x600.jpg"
+                                    class=" lazyloaded mobile" alt="Samsung Galaxy A52 5G">
+                                <aside class="vnpay"><img src="https://cdn.tgdd.vn/2020/10/content/icon6-50x50.png"
+                                        width="20" height="20" alt="VNPAY GIẢM 500.000" class="imgresult"><span
+                                        class="text">VNPAY GIẢM 500.000</span>
+                                </aside>
+                                <h3>Samsung Galaxy A52 5G</h3>
+
+                                <div class="price">
+                                    <strong>10.590.000₫</strong>
+                                    <span>10.990.000₫</span>
+                                </div>
+                                <div class="promo noimage">
+                                    <p>Quà <b>800.000₫</b></p>
+                                </div>
+                                <div class="ratingresult">
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <span>19 đánh giá</span>
+                                </div>
+
+                                <img src="https://cdn.tgdd.vn/ValueIcons/1/Label_01-05.png" width="45" height="45"
+                                    alt="icon" class="icon">
+                                <input class="spInfo" data-brand="Samsung" data-cat="Điện thoại"
+                                    data-code="0131491002462" data-price="10990000" data-pro="5" data-version=""
+                                    id="data235440" name="data235440" type="hidden" value="235440">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="owl-item" style="width: 240px;">
+                        <div class="item" data-index="1">
+                            <a href="/" class="a-installment">
+                                <div class="heightlabel">
+                                    <label class="installment">Trả góp <b>0%</b></label>
+                                </div>
+                                <img width="180" height="180"
+                                    src="https://cdn.tgdd.vn/Products/Images/42/235440/samsung-galaxy-a52-5g-thumb-black-600x600-600x600.jpg"
+                                    class=" lazyloaded mobile" alt="Samsung Galaxy A52 5G">
+                                <aside class="vnpay"><img src="https://cdn.tgdd.vn/2020/10/content/icon6-50x50.png"
+                                        width="20" height="20" alt="VNPAY GIẢM 500.000" class="imgresult"><span
+                                        class="text">VNPAY GIẢM 500.000</span>
+                                </aside>
+                                <h3>Samsung Galaxy A52 5G</h3>
+
+                                <div class="price">
+                                    <strong>10.590.000₫</strong>
+                                    <span>10.990.000₫</span>
+                                </div>
+                                <div class="promo noimage">
+                                    <p>Quà <b>800.000₫</b></p>
+                                </div>
+                                <div class="ratingresult">
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <span>19 đánh giá</span>
+                                </div>
+
+                                <img src="https://cdn.tgdd.vn/ValueIcons/1/Label_01-05.png" width="45" height="45"
+                                    alt="icon" class="icon">
+                                <input class="spInfo" data-brand="Samsung" data-cat="Điện thoại"
+                                    data-code="0131491002462" data-price="10990000" data-pro="5" data-version=""
+                                    id="data235440" name="data235440" type="hidden" value="235440">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="owl-item" style="width: 240px;">
+                        <div class="item" data-index="1">
+                            <a href="/" class="a-installment">
+                                <div class="heightlabel">
+                                    <label class="installment">Trả góp <b>0%</b></label>
+                                </div>
+                                <img width="180" height="180"
+                                    src="https://cdn.tgdd.vn/Products/Images/42/235440/samsung-galaxy-a52-5g-thumb-black-600x600-600x600.jpg"
+                                    class=" lazyloaded mobile" alt="Samsung Galaxy A52 5G">
+                                <aside class="vnpay"><img src="https://cdn.tgdd.vn/2020/10/content/icon6-50x50.png"
+                                        width="20" height="20" alt="VNPAY GIẢM 500.000" class="imgresult"><span
+                                        class="text">VNPAY GIẢM 500.000</span>
+                                </aside>
+                                <h3>Samsung Galaxy A52 5G</h3>
+
+                                <div class="price">
+                                    <strong>10.590.000₫</strong>
+                                    <span>10.990.000₫</span>
+                                </div>
+                                <div class="promo noimage">
+                                    <p>Quà <b>800.000₫</b></p>
+                                </div>
+                                <div class="ratingresult">
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <span>19 đánh giá</span>
+                                </div>
+
+                                <img src="https://cdn.tgdd.vn/ValueIcons/1/Label_01-05.png" width="45" height="45"
+                                    alt="icon" class="icon">
+                                <input class="spInfo" data-brand="Samsung" data-cat="Điện thoại"
+                                    data-code="0131491002462" data-price="10990000" data-pro="5" data-version=""
+                                    id="data235440" name="data235440" type="hidden" value="235440">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="owl-item" style="width: 240px;">
+                        <div class="item" data-index="1">
+                            <a href="/" class="a-installment">
+                                <div class="heightlabel">
+                                    <label class="installment">Trả góp <b>0%</b></label>
+                                </div>
+                                <img width="180" height="180"
+                                    src="https://cdn.tgdd.vn/Products/Images/42/235440/samsung-galaxy-a52-5g-thumb-black-600x600-600x600.jpg"
+                                    class=" lazyloaded mobile" alt="Samsung Galaxy A52 5G">
+                                <aside class="vnpay"><img src="https://cdn.tgdd.vn/2020/10/content/icon6-50x50.png"
+                                        width="20" height="20" alt="VNPAY GIẢM 500.000" class="imgresult"><span
+                                        class="text">VNPAY GIẢM 500.000</span>
+                                </aside>
+                                <h3>Samsung Galaxy A52 5G</h3>
+
+                                <div class="price">
+                                    <strong>10.590.000₫</strong>
+                                    <span>10.990.000₫</span>
+                                </div>
+                                <div class="promo noimage">
+                                    <p>Quà <b>800.000₫</b></p>
+                                </div>
+                                <div class="ratingresult">
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <span>19 đánh giá</span>
+                                </div>
+
+                                <img src="https://cdn.tgdd.vn/ValueIcons/1/Label_01-05.png" width="45" height="45"
+                                    alt="icon" class="icon">
+                                <input class="spInfo" data-brand="Samsung" data-cat="Điện thoại"
+                                    data-code="0131491002462" data-price="10990000" data-pro="5" data-version=""
+                                    id="data235440" name="data235440" type="hidden" value="235440">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="owl-item" style="width: 240px;">
+                        <div class="item" data-index="1">
+                            <a href="/" class="a-installment">
+                                <div class="heightlabel">
+                                    <label class="installment">Trả góp <b>0%</b></label>
+                                </div>
+                                <img width="180" height="180"
+                                    src="https://cdn.tgdd.vn/Products/Images/42/235440/samsung-galaxy-a52-5g-thumb-black-600x600-600x600.jpg"
+                                    class=" lazyloaded mobile" alt="Samsung Galaxy A52 5G">
+                                <aside class="vnpay"><img src="https://cdn.tgdd.vn/2020/10/content/icon6-50x50.png"
+                                        width="20" height="20" alt="VNPAY GIẢM 500.000" class="imgresult"><span
+                                        class="text">VNPAY GIẢM 500.000</span>
+                                </aside>
+                                <h3>Samsung Galaxy A52 5G</h3>
+
+                                <div class="price">
+                                    <strong>10.590.000₫</strong>
+                                    <span>10.990.000₫</span>
+                                </div>
+                                <div class="promo noimage">
+                                    <p>Quà <b>800.000₫</b></p>
+                                </div>
+                                <div class="ratingresult">
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <i class="fas fa-star yellowiconcolor"></i>
+                                    <span>19 đánh giá</span>
+                                </div>
+
+                                <img src="https://cdn.tgdd.vn/ValueIcons/1/Label_01-05.png" width="45" height="45"
+                                    alt="icon" class="icon">
+                                <input class="spInfo" data-brand="Samsung" data-cat="Điện thoại"
+                                    data-code="0131491002462" data-price="10990000" data-pro="5" data-version=""
+                                    id="data235440" name="data235440" type="hidden" value="235440">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="owl-controls clickable">
+                    <div class="owl-buttons">
+                        <div class="owl-prev">‹</div>
+                        <div class="owl-next">›</div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <div style="display: block; background: #fff; margin: 15px 0px;">
+            <div class="navigat first ">
+                <h2>ĐIỆN THOẠI NỔI BẬT NHẤT</h2>
+                <div class="viewallcat">
+                    <a href="https://www.thegioididong.com/dtdd/samsung-galaxy-a72">Samsung Galaxy A72</a>
+                    <a href="https://www.thegioididong.com/dtdd/iphone-12-pro-max">iPhone 12 Pro Max 128GB</a>
+                    <a href="https://www.thegioididong.com/dtdd/oppo-reno5">OPPO Reno5</a>
+                    <a href="https://www.thegioididong.com/dtdd/xiaomi-redmi-note-10-pro">Redmi Note 10 Pro 8GB</a>
+                    <a href="https://www.thegioididong.com/dtdd/iphone-12">iPhone 12 64GB</a>
+                    <a href="/dtdd">Xem tất cả <b>179</b> điện thoại</a>
+                </div>
+            </div>
+            <ul class="homeproduct item">
+                <li class="feature" data-id="220833">
+                    <a href="/dtdd/samsung-galaxy-s21" class="vertion2020">
+                        <img width="600" height="275"
+                            data-original="https://cdn.tgdd.vn/Products/Images/42/220833/Feature/samsung-galaxy-s21-5g-ft-02.jpg"
+                            alt="Samsung Galaxy S21 5G"
+                            src="https://cdn.tgdd.vn/Products/Images/42/220833/Feature/samsung-galaxy-s21-5g-ft-02.jpg">
+                        <div class="heightlabel">
+                            <aside class="result-label temp2"><img
+                                    src="https://cdn.tgdd.vn/2020/10/content/icon2-50x50.png" width="20" height="20"
+                                    alt="THU CŨ ĐỔI MỚI" class="imgresult">
+                                <span class="text">THU CŨ ĐỔI MỚI</span>
+                            </aside>
+                            <label class="installment">Trả góp <b>0%</b></label>
+                        </div>
+                        <h3>Samsung Galaxy S21 5G</h3>
+
+                        <div class="price">
+                            <strong>20.990.000₫</strong>
+                        </div>
+                        <div class="promo noimage">
+                            <p>Giảm thêm <b>6.000.000₫</b></p>
+                        </div>
+                        <div class="ratingresult">
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star grayiconcolor"></i>
+                            <span>44 đánh giá</span>
+                        </div>
+
+                        <input class="spInfo" data-brand="Samsung" data-cat="Điện thoại" data-code="0131491002400"
+                            data-price="20990000" data-pro="5" data-version="" id="data220833" name="data220833"
+                            type="hidden" value="220833">
+                        <div class="clr"></div>
+                    </a>
+                </li>
+                <li data-id="229885">
+                    <a href="/dtdd/oppo-a15" class=" vertion2020 large" data-s="20201210">
+                        <div class="heightlabel">
+                            <label class="installment">Trả góp <b>0%</b></label>
+                        </div>
+                        <img width="180" height="180"
+                            data-original="https://cdn.tgdd.vn/Products/Images/42/229885/TimerThumb/oppo-a15-black-600-test.jpg"
+                            class=" lazyloaded mobile" alt="OPPO A15"
+                            src="https://cdn.tgdd.vn/Products/Images/42/229885/TimerThumb/oppo-a15-black-600-test.jpg">
+
+                        <h3>OPPO A15</h3>
+
+
+                        <div class="price">
+                            <strong>3.490.000₫</strong>
+                        </div>
+                        <div class="ratingresult">
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <span>29 đánh giá</span>
+                        </div>
+
+                        <input class="spInfo" data-brand="OPPO" data-cat="Điện thoại" data-code="0131491002374"
+                            data-price="3490000" data-pro="5" data-version="" id="data229885" name="data229885"
+                            type="hidden" value="229885">
+                    </a>
+                </li>
+                <li data-id="213031">
+                    <a href="/dtdd/iphone-12" class=" vertion2020 large" data-s="20201210">
+                        <div class="heightlabel">
+                            <label class="installment">Trả góp <b>0%</b></label>
+                        </div>
+                        <img width="180" height="180"
+                            data-original="https://cdn.tgdd.vn/Products/Images/42/213031/iphone-12-xanh-duong-new-600x600-600x600.jpg"
+                            class=" lazyloaded mobile" alt="iPhone 12 64GB"
+                            src="https://cdn.tgdd.vn/Products/Images/42/213031/iphone-12-xanh-duong-new-600x600-600x600.jpg">
+                        <aside class="result-label temp3"><img
+                                src="https://cdn.tgdd.vn/2021/04/content/icon3-350x50-50x50.png" width="20" height="20"
+                                alt="AIRPODS KM ĐẾN 47%" loading="lazy" class="imgresult lazyloaded"><span
+                                class="text">AIRPODS KM ĐẾN 47%</span></aside>
+                        <h3>iPhone 12 64GB</h3>
+
+
+                        <div class="price">
+                            <strong>21.990.000₫</strong>
+                            <span>23.990.000₫</span>
+                            <i>-8%</i>
+                        </div>
+                        <div class="ratingresult">
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <span>23 đánh giá</span>
+                        </div>
+
+                        <input class="spInfo" data-brand="iPhone (Apple)" data-cat="Điện thoại"
+                            data-code="0131491002273" data-price="23990000" data-pro="5" data-version="" id="data213031"
+                            name="data213031" type="hidden" value="213031">
+                    </a>
+                </li>
+                <li data-id="222758">
+                    <a href="/dtdd/xiaomi-redmi-note-10" class=" vertion2020 large" data-s="0">
+                        <div class="heightlabel">
+                            <label class="installment">Trả góp <b>0%</b></label>
+                        </div>
+                        <img width="180" height="180"
+                            data-original="https://cdn.tgdd.vn/Products/Images/42/222758/xiaomi-redmi-note-10-thumb-green-600x600-1-600x600.jpg"
+                            class=" lazyloaded mobile" alt="Xiaomi Redmi Note 10 (6GB/128GB)"
+                            src="https://cdn.tgdd.vn/Products/Images/42/222758/xiaomi-redmi-note-10-thumb-green-600x600-1-600x600.jpg">
+
+                        <h3>Xiaomi Redmi Note 10 (6GB/128GB)</h3>
+
+
+                        <div class="price">
+                            <strong>5.490.000₫</strong>
+                        </div>
+                        <div class="ratingresult">
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <span>109 đánh giá</span>
+                        </div>
+
+                        <img data-original="https://cdn.tgdd.vn/ValueIcons/1/Label_01-02.png" width="45" height="45"
+                            alt="icon" class="icon" src="https://cdn.tgdd.vn/ValueIcons/1/Label_01-02.png">
+                        <input class="spInfo" data-brand="Xiaomi" data-cat="Điện thoại" data-code="0131491002465"
+                            data-price="5490000" data-pro="5" data-version="" id="data222758" name="data222758"
+                            type="hidden" value="222758">
+                    </a>
+                </li>
+                <li class="feature" data-id="220833">
+                    <a href="/dtdd/samsung-galaxy-s21" class="vertion2020">
+                        <img width="600" height="275"
+                            data-original="https://cdn.tgdd.vn/Products/Images/42/220833/Feature/samsung-galaxy-s21-5g-ft-02.jpg"
+                            alt="Samsung Galaxy S21 5G"
+                            src="https://cdn.tgdd.vn/Products/Images/42/220833/Feature/samsung-galaxy-s21-5g-ft-02.jpg">
+                        <div class="heightlabel">
+                            <aside class="result-label temp2"><img
+                                    src="https://cdn.tgdd.vn/2020/10/content/icon2-50x50.png" width="20" height="20"
+                                    alt="THU CŨ ĐỔI MỚI" class="imgresult">
+                                <span class="text">THU CŨ ĐỔI MỚI</span>
+                            </aside>
+                            <label class="installment">Trả góp <b>0%</b></label>
+                        </div>
+                        <h3>Samsung Galaxy S21 5G</h3>
+
+                        <div class="price">
+                            <strong>20.990.000₫</strong>
+                        </div>
+                        <div class="promo noimage">
+                            <p>Giảm thêm <b>6.000.000₫</b></p>
+                        </div>
+                        <div class="ratingresult">
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star grayiconcolor"></i>
+                            <span>44 đánh giá</span>
+                        </div>
+
+                        <input class="spInfo" data-brand="Samsung" data-cat="Điện thoại" data-code="0131491002400"
+                            data-price="20990000" data-pro="5" data-version="" id="data220833" name="data220833"
+                            type="hidden" value="220833">
+                        <div class="clr"></div>
+                    </a>
+                </li>
+                <li data-id="229885">
+                    <a href="/dtdd/oppo-a15" class=" vertion2020 large" data-s="20201210">
+                        <div class="heightlabel">
+                            <label class="installment">Trả góp <b>0%</b></label>
+                        </div>
+                        <img width="180" height="180"
+                            data-original="https://cdn.tgdd.vn/Products/Images/42/229885/TimerThumb/oppo-a15-black-600-test.jpg"
+                            class=" lazyloaded mobile" alt="OPPO A15"
+                            src="https://cdn.tgdd.vn/Products/Images/42/229885/TimerThumb/oppo-a15-black-600-test.jpg">
+
+                        <h3>OPPO A15</h3>
+
+
+                        <div class="price">
+                            <strong>3.490.000₫</strong>
+                        </div>
+                        <div class="ratingresult">
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <span>29 đánh giá</span>
+                        </div>
+
+                        <input class="spInfo" data-brand="OPPO" data-cat="Điện thoại" data-code="0131491002374"
+                            data-price="3490000" data-pro="5" data-version="" id="data229885" name="data229885"
+                            type="hidden" value="229885">
+                    </a>
+                </li>
+                <li data-id="213031">
+                    <a href="/dtdd/iphone-12" class=" vertion2020 large" data-s="20201210">
+                        <div class="heightlabel">
+                            <label class="installment">Trả góp <b>0%</b></label>
+                        </div>
+                        <img width="180" height="180"
+                            data-original="https://cdn.tgdd.vn/Products/Images/42/213031/iphone-12-xanh-duong-new-600x600-600x600.jpg"
+                            class=" lazyloaded mobile" alt="iPhone 12 64GB"
+                            src="https://cdn.tgdd.vn/Products/Images/42/213031/iphone-12-xanh-duong-new-600x600-600x600.jpg">
+                        <aside class="result-label temp3"><img
+                                src="https://cdn.tgdd.vn/2021/04/content/icon3-350x50-50x50.png" width="20" height="20"
+                                alt="AIRPODS KM ĐẾN 47%" loading="lazy" class="imgresult lazyloaded"><span
+                                class="text">AIRPODS KM ĐẾN 47%</span></aside>
+                        <h3>iPhone 12 64GB</h3>
+
+
+                        <div class="price">
+                            <strong>21.990.000₫</strong>
+                            <span>23.990.000₫</span>
+                            <i>-8%</i>
+                        </div>
+                        <div class="ratingresult">
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <span>23 đánh giá</span>
+                        </div>
+
+                        <input class="spInfo" data-brand="iPhone (Apple)" data-cat="Điện thoại"
+                            data-code="0131491002273" data-price="23990000" data-pro="5" data-version="" id="data213031"
+                            name="data213031" type="hidden" value="213031">
+                    </a>
+                </li>
+                <li data-id="222758">
+                    <a href="/dtdd/xiaomi-redmi-note-10" class=" vertion2020 large" data-s="0">
+                        <div class="heightlabel">
+                            <label class="installment">Trả góp <b>0%</b></label>
+                        </div>
+                        <img width="180" height="180"
+                            data-original="https://cdn.tgdd.vn/Products/Images/42/222758/xiaomi-redmi-note-10-thumb-green-600x600-1-600x600.jpg"
+                            class=" lazyloaded mobile" alt="Xiaomi Redmi Note 10 (6GB/128GB)"
+                            src="https://cdn.tgdd.vn/Products/Images/42/222758/xiaomi-redmi-note-10-thumb-green-600x600-1-600x600.jpg">
+
+                        <h3>Xiaomi Redmi Note 10 (6GB/128GB)</h3>
+
+
+                        <div class="price">
+                            <strong>5.490.000₫</strong>
+                        </div>
+                        <div class="ratingresult">
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <i class="fas fa-star yellowiconcolor"></i>
+                            <span>109 đánh giá</span>
+                        </div>
+
+                        <img data-original="https://cdn.tgdd.vn/ValueIcons/1/Label_01-02.png" width="45" height="45"
+                            alt="icon" class="icon" src="https://cdn.tgdd.vn/ValueIcons/1/Label_01-02.png">
+                        <input class="spInfo" data-brand="Xiaomi" data-cat="Điện thoại" data-code="0131491002465"
+                            data-price="5490000" data-pro="5" data-version="" id="data222758" name="data222758"
+                            type="hidden" value="222758">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div style="display: block; background: #fff; margin: 15px 0px;">
+            <div class="navigat first ">
+                <h2>Laptop nổi bật nhất</h2>
+                <div class="viewallcat">
+                    <a href="https://www.thegioididong.com/laptop-asus">Laptop Asus</a>
+                    <a href="https://www.thegioididong.com/laptop-hp-compaq">Laptop HP</a>
+                    <a href="https://www.thegioididong.com/laptop-lenovo">Laptop Lenovo</a>
+                    <a href="https://www.thegioididong.com/laptop-apple-macbook-pro">Macbook Pro</a>
+                    <a href="https://www.thegioididong.com/laptop-acer">Laptop Acer</a>
+                    <a href="/laptop">Xem tất cả <b>179</b> laptop</a>
+                </div>
+            </div>
+            <ul class="homeproduct item">
+                <li class="feature" data-id="216292">
+                    <a href="/laptop/lenovo-ideapad-s145-81w8001xvn" class="vertion2020">
+                        <img width="600" height="275"
+                            data-original="https://cdn.tgdd.vn/Products/Images/44/216292/Feature/lenovo-thang-4-fix.jpg"
+                            class=" lazyloaded"
+                            alt="Lenovo IdeaPad S145 15IIL i3 1005G1/4GB/256GB/Win10 (81W8001XVN)"
+                            src="https://cdn.tgdd.vn/Products/Images/44/216292/Feature/lenovo-thang-4-fix.jpg">
+                        <div class="heightlabel">
+                            <label class="installment">Trả góp <b>0%</b></label>
+                        </div>
+                        <h3>Lenovo IdeaPad S145 15IIL i3 1005G1 (81W8001XVN)</h3>
+                        <div class="props">
+                            <span class="dotted  ">RAM 4GB</span>
+                            <span class="dotted  ">SSD 256GB</span>
+                        </div>
+
+
+                        <h6 class="textkm">Online giá rẻ</h6>
+                        <div class="price">
+                            <strong>10.490.000₫</strong>
+                            <span>11.490.000₫</span>
+                            <i>-8%</i>
+                        </div>
+                        <div class="promo noimage">
+                            <p>Quà <b>300.000₫</b></p>
+                        </div>
+                        <div class="ratingresult">
+                            <i class="icontgdd-ystar"></i>
+                            <i class="icontgdd-ystar"></i>
+                            <i class="icontgdd-ystar"></i>
+                            <i class="icontgdd-gstar"></i>
+                            <i class="icontgdd-gstar"></i>
+                            <span>20 đánh giá</span>
+                        </div>
+
+                        <input class="spInfo" data-brand="Lenovo" data-cat="Laptop"
+                            data-code="0220042001100" data-price="11490000" data-pro="5" data-version=""
+                            id="data216292" name="data216292" type="hidden" value="216292">
+                        <div class="clr"></div>
+                    </a>
+                </li>
+                <li data-id="231082">
+                    <a href="/laptop/acer-aspire-5-a514-54-33wy-i3-nxa23sv00j"
+                        class="laptop vertion2020 large" data-s="0">
+                        <div class="heightlabel">
+                            <label class="installment">Trả góp <b>0%</b></label>
+                        </div>
+                        <img width="180" height="180"
+                            data-original="https://cdn.tgdd.vn/Products/Images/44/231082/acer-aspire-5-a514-54-33wy-i3-nxa23sv00j-021220-101200-400x400.jpg"
+                            class=" lazyloaded"
+                            alt="Acer Aspire 5 A514 54 33WY i3 1115G4/4GB/256GB/Win10 (NX.A23SV.00J)"
+                            src="https://cdn.tgdd.vn/Products/Images/44/231082/acer-aspire-5-a514-54-33wy-i3-nxa23sv00j-021220-101200-400x400.jpg">
+
+                        <h3>Acer Aspire 5 A514 54 33WY i3 1115G4 (NX.A23SV.00J)</h3>
+                        <div class="props">
+                            <span class="dotted  ">RAM 4GB</span>
+                            <span class="dotted  ">SSD 256GB</span>
+                        </div>
+
+
+                        <div class="price">
+                            <strong>13.590.000₫</strong>
+                        </div>
+                        <div class="promo noimage">
+                            <p>Quà <b>300.000₫</b></p>
+                        </div>
+
+                        <img data-original="https://cdn.tgdd.vn/ValueIcons/1/11th-gen-core-i3-processors-badge-rwd.png.rendition.intel.web.550.550-(1).png"
+                            width="45" height="45" alt="icon" class="icon laptop"
+                            src="https://cdn.tgdd.vn/ValueIcons/1/11th-gen-core-i3-processors-badge-rwd.png.rendition.intel.web.550.550-(1).png">
+                        <input class="spInfo" data-brand="Acer" data-cat="Laptop" data-code="0220042001272"
+                            data-price="13590000" data-pro="5" data-version="" id="data231082"
+                            name="data231082" type="hidden" value="231082">
+                    </a>
+                </li>
+                <li data-id="106875">
+                    <a href="/laptop/apple-macbook-air-mqd32sa-a-i5-5350u" class="laptop vertion2020 large"
+                        data-s="0">
+                        <div class="heightlabel">
+
+                        </div>
+                        <img width="180" height="180"
+                            data-original="https://cdn.tgdd.vn/Products/Images/44/106875/apple-macbook-air-mqd32sa-a-i5-5350u-400x400.jpg"
+                            class=" lazyloaded" alt="Apple MacBook Air 2017 i5 1.8GHz/8GB/128GB (MQD32SA/A)"
+                            src="https://cdn.tgdd.vn/Products/Images/44/106875/apple-macbook-air-mqd32sa-a-i5-5350u-400x400.jpg">
+
+                        <h3>MacBook Air 2017 128GB (MQD32SA/A)</h3>
+                        <div class="props">
+                            <span class="dotted ">8 GB</span>
+                            <span class="dotted  ">SSD 128GB</span>
+                        </div>
+
+
+                        <div class="price">
+                            <strong>19.990.000₫</strong>
+                        </div>
+                        <div class="promo noimage">
+                            <p>Quà <b>250.000₫</b></p>
+                        </div>
+                        <div class="ratingresult">
+                            <i class="icontgdd-ystar"></i>
+                            <i class="icontgdd-ystar"></i>
+                            <i class="icontgdd-ystar"></i>
+                            <i class="icontgdd-ystar"></i>
+                            <i class="icontgdd-hstar"></i>
+                            <span>50 đánh giá</span>
+                        </div>
+
+                        <input class="spInfo" data-brand="MacBook" data-cat="Laptop"
+                            data-code="0220042000233" data-price="19990000" data-pro="5" data-version=""
+                            id="data106875" name="data106875" type="hidden" value="106875">
+                    </a>
+                </li>
+                <li data-id="223534">
+                    <a href="/laptop/lenovo-ideapad-3-15iil05-i3-81we003rvn"
+                        class="laptop vertion2020 large" data-s="0">
+                        <div class="heightlabel">
+                            <label class="installment">Trả góp <b>0%</b></label>
+                        </div>
+                        <img width="180" height="180"
+                            data-original="https://cdn.tgdd.vn/Products/Images/44/223534/lenovo-ideapad-3-15iil05-i3-81we003rvn-211520-101539-400x400.jpg"
+                            class=" lazyloaded"
+                            alt="Lenovo IdeaPad Slim 3 15IIL05 i3 1005G1/4GB/512GB/Win10 (81WE003RVN)"
+                            src="https://cdn.tgdd.vn/Products/Images/44/223534/lenovo-ideapad-3-15iil05-i3-81we003rvn-211520-101539-400x400.jpg">
+
+                        <h3>Lenovo IdeaPad Slim 3 15IIL05 i3 1005G1 (81WE003RVN)</h3>
+                        <div class="props">
+                            <span class="dotted  ">RAM 4GB</span>
+                            <span class="dotted  ">SSD 512GB</span>
+                        </div>
+
+
+                        <h6 class="textkm">Online giá rẻ</h6>
+                        <div class="price">
+                            <strong>11.990.000₫</strong>
+                            <span>12.990.000₫</span>
+                            <i>-7%</i>
+                        </div>
+                        <div class="promo noimage">
+                            <p>Quà <b>300.000₫</b></p>
+                        </div>
+
+                        <img data-original="https://cdn.tgdd.vn/ValueIcons/1/Label_01-01.png" width="45"
+                            height="45" alt="icon" class="icon laptop"
+                            src="https://cdn.tgdd.vn/ValueIcons/1/Label_01-01.png">
+                        <input class="spInfo" data-brand="Lenovo" data-cat="Laptop"
+                            data-code="0220042001177" data-price="12990000" data-pro="5" data-version=""
+                            id="data223534" name="data223534" type="hidden" value="223534">
+                    </a>
+                </li>
+            </ul>
+            
+        </div>
+
+
+
+    </section>
+    <footer>
+        <div class="rowfoot1">
+            <ul class="colfoot">
+                <li><a href="/#" title="Lịch sử mua hàng">Lịch sử mua hàng</a></li>
+                <li><a rel="nofollow" href="https://www.dienmayxanh.com/daily" title="Đăng ký làm đại lý cho TGDĐ">Đăng ký làm đại lý cho TGDĐ</a></li>
+                <li><a href="/tra-gop" title="Hướng dẫn mua trả góp">Tìm hiểu về mua trả góp</a></li>
+                <li><a href="/bao-hanh" title="Tìm trung tâm bảo hành">Chính sách bảo hành</a></li>
+                <li><a href="/chinh-sach-bao-hanh-san-pham" title="Chính sách đổi trả">Chính sách đổi trả</a></li>
+                
+                <li class="showmore" onclick="ShowMoreFooterSupportLink()" ><a title="Xem thêm" id="myBtn">Xem thêm</a></li>
+                <li class="hidden"><a href="#" title="Giao hàng &amp Thanh toán">Giao hàng &amp Thanh toán</a></li>
+                <li class="hidden"><a href="#" title="Hướng dẫn mua online">Hướng dẫn mua online</a></li>
+                <li class="hidden"><a href="#" title="Bán hàng doanh nghiệp">Bán hàng doanh nghiệp</a></li>
+                <li class="hidden"><a href="#" title="Phiếu mua hàng">Phiếu mua hàng</a></li>
+                <li class="hidden"><a href="#" title="In hóa đơn điện tử">In hóa đơn điện tử</a></li>
+            </ul>
+            <ul class="colfoot">
+                <li><a href="http://mwg.vn" target="_blank" title="Giới thiệu công ty (mwg.vn)" rel="noopener">Giới thiệu công ty <span>(mwg.vn)</span></a></li>
+                <li><a href="//vieclam.thegioididong.com" target="_blank" title="Tuyển dụng" rel="noopener">Tuyển dụng</a></li>
+                <li><a href="/lien-he" title="Gửi góp ý, khiếu nại">Gửi góp ý, khiếu nại</a></li>
+                <li><a href="/he-thong-sieu-thi-the-gioi-di-dong" title="Tìm siêu thị (2.533 shop)">Tìm siêu thị <span>(2.533 shop)</span></a></li>
+                <li>
+                    <a class="viewmb" href="/?sclient=mobile" rel="nofollow" title="Xem bản mobile">Xem bản mobile</a>
+                </li>
+            </ul>
+            <ul class="colfoot">
+                <li>
+                    <p>Gọi mua hàng <a href="tel:18001060">1800.1060</a> (7:30 - 22:00)</p>
+                    <p>Gọi khiếu nại &nbsp; <a href="tel:18001062">1800.1062</a> (8:00 - 21:30)</p>
+                    <p>Gọi bảo hành &nbsp; <a href="tel:18001064">1800.1064</a> (8:00 - 21:00)</p>
+                    <p>Kỹ thuật &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="tel:18001763">1800.1763</a> (7:30 - 22:00)</p>
+                    <a target="_blank" rel="nofollow noopener" class="bct" href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=20098" aria-label="bộ công thương mwg"><i class="icontgdd-bct"></i></a>
+                    <a rel="nofollow noopener" class="bct" href="/tos#giai-quyet-khieu-nai" aria-label="bộ công thương chống hàng giả"><i class="icontgdd-hg"></i></a>
+                    <a href="//www.dmca.com/Protection/Status.aspx?ID=5b62e759-2a0c-4d86-b972-af903bfbc89d&amp;refurl=http://www.thegioididong.com/" title="DMCA.com Protection Status" class="dmca-badge"> <img style="opacity:0.6;margin: 0px auto -8px;display: block;" src="//images.dmca.com/Badges/dmca-badge-w100-5x1-11.png?ID=5b62e759-2a0c-4d86-b972-af903bfbc89d" alt="DMCA.com Protection Status"></a>
+                </li>
+            </ul>
+            <ul class="colfoot collast">
+                <li>
+                    <a target="_blank" href="https://facebook.com/thegioididongcom" class="linkfb" rel="noopener">
+                        <i class="icontgdd-share1"></i>3.5tr
+                    </a>
+                    <a target="_blank" href="https://www.youtube.com/user/TGDDVideoReviews?sub_confirmation=1" class="linkyt" rel="noopener">
+                        <i class="icontgdd-share3"></i>786k
+                    </a>
+                    <div class="group">
+                        <label>Website cùng tập đoàn:</label>
+                        <a href="//www.maiamtgdd.vn" target="_blank" rel="noopener" class="ma" aria-label="www.maiamtgdd.vn"><i class="iconlogo-ma"></i></a>
+                        <a href="//www.dienmayxanh.com" target="_blank" rel="noopener" class="dm" aria-label="www.dienmayxanh.com"><i class="iconlogo-dmx"></i></a>
+                        <a href="//www.bachhoaxanh.com" target="_blank" rel="noopener" class="bhx" aria-label="www.bachhoaxanh.com"><i class="iconlogo-bhx"></i></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="rowfoot2">
+            <p>© 2018. Công ty cổ phần Thế Giới Di Động. GPDKKD: 0303217354 do sở KH &amp; ĐT TP.HCM cấp ngày 02/01/2007. GPMXH: 238/GP-BTTTT do Bộ Thông Tin và Truyền Thông cấp ngày 04/06/2020. Địa chỉ: 128 Trần Quang Khải, P. Tân Định, Q.1, TP.Hồ Chí Minh. Điện thoại: 028 38125960. Email: cskh@thegioididong.com.<br>Chịu trách nhiệm nội dung: Huỳnh Văn Tốt. <a href="/thoa-thuan-su-dung-trang-mxh">Xem chính sách sử dụng</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
